@@ -1,0 +1,71 @@
+/* css Zen Garden default style v1.02 */
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+/* This file based on 'Tranquille' by Dave Shea */
+/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
+/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
+/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
+/* basic elements */
+html {
+  margin: 0;
+  padding: 0;
+}
+
+.page-wrapper {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-areas: "header sidebar" "zen-summary sidebar" "zen-preamble sidebar" "zen-explanation sidebar" "zen-participation sidebar" "zen-benefits sidebar" "zen-requirements sidebar" "footer sidebar";
+}
+@media screen and (max-width: 800px) {
+  .page-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "header" "zen-summary" "zen-preamble" "zen-explanation" "zen-participation" "zen-benefits" "zen-requirements" "footer" "sidebar";
+  }
+}
+
+.intro::before {
+  content: "";
+  background: transparent url(https://raw.githubusercontent.com/Ricardo230698/CSS-Zen-Garden-Project/main/images/chile01.jpeg) no-repeat top center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+header {
+  grid-area: header;
+}
+
+.summary {
+  grid-area: zen-summary;
+}
+
+.preamble {
+  grid-area: zen-preamble;
+}
+
+.explanation {
+  grid-area: zen-explanation;
+}
+
+.participation {
+  grid-area: zen-participation;
+}
+
+.benefits {
+  grid-area: zen-benefits;
+}
+
+.requirements {
+  grid-area: zen-requirements;
+}
+
+footer {
+  grid-area: footer;
+}
+
+aside {
+  grid-area: sidebar;
+  margin: auto;
+}
+
+/*# sourceMappingURL=style.css.map */
